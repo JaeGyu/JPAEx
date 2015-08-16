@@ -8,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class JpaMain {
+	
 	public static void main(String[] args) {
 
 		EntityManagerFactory emf = Persistence
@@ -17,9 +18,9 @@ public class JpaMain {
 
 		try {
 			tx.begin();
-//			login(em);
+			login(em);
 //			chap03(em);
-			testDetached(em);
+//			testDetached(em);
 			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();
